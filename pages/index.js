@@ -2,20 +2,24 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
 import { Table } from 'antd';
-export default function Home() {
+import 'antd/dist/antd.css';
+
+const PageAuth = (data) => {
+  const { session, username, password } = data;
+  return <div>Auth</div>;
+};
+
+export default function Home(config) {
   return (
     <div className={styles.container}>
+      <PageAuth />
       <Head>
         <title>gov</title>
       </Head>
-      <div></div>
       <main className={styles.main}>
-        <h1 className={styles.title}>gov.ittps.ru</h1>
+        <h1 className={styles.title}>title</h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <p className={styles.description}>description</p>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
