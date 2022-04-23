@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.antd-select {
+  min-width: 100px;
+}

@@ -9,9 +9,12 @@
   },
   "dependencies": {
     "antd": "latest",
+    "antd-form-builder": "^2.1.4",
+    "axios": "^0.26.1",
     "next": "^12.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "axios": "latest"
+    "strapi-sdk-js": "^2.2.0",
+    "yandex-disk": "^0.0.8"
   }
 }
