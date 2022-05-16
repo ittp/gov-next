@@ -22,6 +22,18 @@ const { Option } = Select;
 const os = require('os');
 class SelectForm extends Component {
   state = {
+    types: [
+      {
+        key: 'allow',
+        value: 'allow',
+        title: 'allow',
+      },
+      {
+        key: 'deny',
+        value: 'deny',
+        title: 'deny',
+      },
+    ],
     browser: [
       {
         title: 'Chrome',
@@ -51,12 +63,27 @@ class SelectForm extends Component {
     console.log(browser);
 
     return (
-      <Form id="config" onSubmit={this.onSelect} state={this.state}>
-        <Select
-          options={this.state.browser}
-          defaultActiveFirstOption={true}
-          onChange={this.onSelect}
-        />
+      <Form
+        id="config"
+        onSubmit={this.onSelect}
+        state={this.state}
+        style={{ width: 500 }}
+        layout={'horizontal'}
+      >
+        <p>Create</p>
+        <p>
+          <Input />
+        </p>
+        <p>
+          <Select
+            style={{ display: 'flex', minWidth: '100' }}
+            defaultValue={'data'}
+            labelInValue={true}
+            defaultActiveFirstOption={true}
+            options={this.state.types}
+            onChange={this.onSelect}
+          />
+        </p>
         <Button>Save</Button>
       </Form>
     );
